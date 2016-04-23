@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Edit View Controller-->
+        <scene sceneID="UX8-xn-UWU">
+            <objects>
+                <viewController storyboardIdentifier="eidtVC" id="Kum-Nq-cdT" customClass="EditViewController" customModule="Swift各种传值" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYV-Hj-b0v"/>
+                        <viewControllerLayoutGuide type="bottom" id="xFf-OC-KCd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mzu-IO-38N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请修改名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r8-iZ-pa6">
+                                <rect key="frame" x="15" y="290" width="85" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQR-t6-Hoz">
+                                <rect key="frame" x="115" y="285" width="435" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpW-yh-GY2">
+                                <rect key="frame" x="105" y="345" width="90" height="30"/>
+                                <state key="normal" title="delegate传值"/>
+                                <connections>
+                                    <action selector="delegateBtnClick:" destination="Kum-Nq-cdT" eventType="touchUpInside" id="e1u-eU-32z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0g-4g-cDg">
+                                <rect key="frame" x="416" y="345" width="68" height="30"/>
+                                <state key="normal" title="block传值"/>
+                                <connections>
+                                    <action selector="blockBtnClick:" destination="Kum-Nq-cdT" eventType="touchUpInside" id="br1-dj-pOZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6r8-iZ-pa6" firstAttribute="leading" secondItem="mzu-IO-38N" secondAttribute="leading" constant="15" id="E8A-L9-T73"/>
+                            <constraint firstItem="6r8-iZ-pa6" firstAttribute="centerY" secondItem="mzu-IO-38N" secondAttribute="centerY" id="Jt8-xi-ozC"/>
+                            <constraint firstItem="NpW-yh-GY2" firstAttribute="top" secondItem="IQR-t6-Hoz" secondAttribute="bottom" constant="30" id="Kzm-mn-56u"/>
+                            <constraint firstAttribute="trailing" secondItem="IQR-t6-Hoz" secondAttribute="trailing" constant="50" id="Rpf-pZ-ZMI"/>
+                            <constraint firstItem="Z0g-4g-cDg" firstAttribute="top" secondItem="NpW-yh-GY2" secondAttribute="top" id="VXI-Lf-Qnb"/>
+                            <constraint firstItem="IQR-t6-Hoz" firstAttribute="leading" secondItem="6r8-iZ-pa6" secondAttribute="trailing" constant="15" id="VqS-H9-t9k"/>
+                            <constraint firstItem="NpW-yh-GY2" firstAttribute="centerX" secondItem="mzu-IO-38N" secondAttribute="centerX" multiplier="0.5" id="WBG-tm-cM7"/>
+                            <constraint firstItem="IQR-t6-Hoz" firstAttribute="centerY" secondItem="mzu-IO-38N" secondAttribute="centerY" id="t3O-lg-U77"/>
+                            <constraint firstItem="Z0g-4g-cDg" firstAttribute="centerX" secondItem="mzu-IO-38N" secondAttribute="centerX" multiplier="1.5" id="y6A-a9-jlB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blockBtn" destination="Z0g-4g-cDg" id="1wf-bN-x0C"/>
+                        <outlet property="delegateBtn" destination="NpW-yh-GY2" id="a2b-l0-znk"/>
+                        <outlet property="textFiled" destination="IQR-t6-Hoz" id="EZy-PN-Jmo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIe-Fx-UmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="370"/>
+        </scene>
+    </scenes>
+</document>

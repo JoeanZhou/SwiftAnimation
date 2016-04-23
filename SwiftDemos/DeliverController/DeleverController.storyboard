@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Delever Controller-->
+        <scene sceneID="I2h-Ew-8hg">
+            <objects>
+                <viewController storyboardIdentifier="DeleverController" id="AMc-al-JMw" customClass="DeleverController" customModule="SwiftDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="13y-pl-DJO"/>
+                        <viewControllerLayoutGuide type="bottom" id="FF7-yk-hhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xfq-4W-kiX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zgo-TV-a8E">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AMc-al-JMw" id="hAP-WW-DZ3"/>
+                                    <outlet property="delegate" destination="AMc-al-JMw" id="1Qe-gY-S9m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FF7-yk-hhm" firstAttribute="top" secondItem="Zgo-TV-a8E" secondAttribute="bottom" id="7dp-wS-iis"/>
+                            <constraint firstItem="Zgo-TV-a8E" firstAttribute="leading" secondItem="xfq-4W-kiX" secondAttribute="leading" id="Ohs-np-gCm"/>
+                            <constraint firstItem="Zgo-TV-a8E" firstAttribute="top" secondItem="13y-pl-DJO" secondAttribute="bottom" id="djB-X3-dNJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Zgo-TV-a8E" secondAttribute="trailing" id="uCO-QV-1dc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zze-KM-suf"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="Zgo-TV-a8E" id="hAP-Yk-NOB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yXl-EE-eD9" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

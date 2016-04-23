@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Xiu Xiu Animation-->
+        <scene sceneID="uji-sU-8Jt">
+            <objects>
+                <viewController storyboardIdentifier="XiuXiuAnimation" id="X6f-sL-DCA" customClass="XiuXiuAnimation" customModule="SwiftDemos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBV-hV-TCw"/>
+                        <viewControllerLayoutGuide type="bottom" id="u89-Nd-rtl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TW0-K9-Hac">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Go-eP-mdv">
+                                <rect key="frame" x="265" y="285" width="70" height="30"/>
+                                <state key="normal" title="执行xiuxiu"/>
+                                <connections>
+                                    <action selector="excutAnimation:" destination="X6f-sL-DCA" eventType="touchUpInside" id="LcG-Oz-jo0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Go-eP-mdv" firstAttribute="centerY" secondItem="TW0-K9-Hac" secondAttribute="centerY" id="rf1-yF-ims"/>
+                            <constraint firstItem="0Go-eP-mdv" firstAttribute="centerX" secondItem="TW0-K9-Hac" secondAttribute="centerX" id="vBu-YK-8ie"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywR-qq-tbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="261"/>
+        </scene>
+    </scenes>
+</document>
