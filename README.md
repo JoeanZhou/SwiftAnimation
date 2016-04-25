@@ -3,7 +3,7 @@
 
 delegate 与 Block 的反象传值 说明
 
-![image](https://github.com/JoeanZhou/SwiftAnimationraw/master/CAGraientLayer.png)
-![image](https://github.com/JoeanZhou/SwiftAnimationraw/master/CAShapeLayer.png)
-![image](https://github.com/JoeanZhou/SwiftAnimationraw/master/DelegateBlock.png)
-![image](https://github.com/JoeanZhou/SwiftAnimationraw/master/xiuxiuAnimation.png)
+![image](https://github.com/JoeanZhou/SwiftAnimation/raw/master/CAGraientLayer.png)
+![image](https://github.com/JoeanZhou/SwiftAnimation/raw/master/CAShapeLayer.png)
+![image](https://github.com/JoeanZhou/SwiftAnimation/raw/master/DelegateBlock.png)
+![image](https://github.com/JoeanZhou/SwiftAnimation/raw/master/xiuxiuAnimation.png)
