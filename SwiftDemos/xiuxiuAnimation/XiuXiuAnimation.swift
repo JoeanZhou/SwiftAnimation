@@ -17,22 +17,22 @@ class XiuXiuAnimation: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func excutAnimation(sender: UIButton)
+    @IBAction func excutAnimation(_ sender: UIButton)
     {
         
         let lineLayer = CALayer()
         lineLayer.cornerRadius = view.bounds.size.width
-        lineLayer.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width * 2, UIScreen.mainScreen().bounds.size.width * 2)
-        lineLayer.position = CGPointMake(UIScreen.mainScreen().bounds.size.width * 0.5, UIScreen.mainScreen().bounds.size.height * 0.5)
+        lineLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width * 2, height: UIScreen.main.bounds.size.width * 2)
+        lineLayer.position = CGPoint(x: UIScreen.main.bounds.size.width * 0.5, y: UIScreen.main.bounds.size.height * 0.5)
         lineLayer.borderWidth = 1
-        lineLayer.borderColor = UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.5).CGColor
+        lineLayer.borderColor = UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.5).cgColor
         view.layer.addSublayer(lineLayer)
         
         let gradiateLayer = CAGradientLayer()
         gradiateLayer.cornerRadius = view.bounds.size.width
-        gradiateLayer.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width * 2 - 1, UIScreen.mainScreen().bounds.size.width * 2 - 1)
-        gradiateLayer.position = CGPointMake(UIScreen.mainScreen().bounds.size.width * 0.5, UIScreen.mainScreen().bounds.size.height * 0.5)
-        gradiateLayer.colors = [UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.8).CGColor, UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.8).CGColor]
+        gradiateLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width * 2 - 1, height: UIScreen.main.bounds.size.width * 2 - 1)
+        gradiateLayer.position = CGPoint(x: UIScreen.main.bounds.size.width * 0.5, y: UIScreen.main.bounds.size.height * 0.5)
+        gradiateLayer.colors = [UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.8).cgColor, UIColor(red: 18 / 255.0, green: 90 / 255.0, blue: 235 / 255.0, alpha: 0.8).cgColor]
         view.layer.addSublayer(gradiateLayer)
         
         baseAnimation = CABasicAnimation()
@@ -43,13 +43,13 @@ class XiuXiuAnimation: UIViewController {
         baseAnimation!.duration = 2.0
         baseAnimation!.fillMode = kCAFillModeForwards
         
-        gradiateLayer.addAnimation(baseAnimation!, forKey: "gradiateLayerAnimation")
-        lineLayer.addAnimation(baseAnimation!, forKey: "lineLayerAnimation")
+        gradiateLayer.add(baseAnimation!, forKey: "gradiateLayerAnimation")
+        lineLayer.add(baseAnimation!, forKey: "lineLayerAnimation")
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(2.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: {
                 gradiateLayer.removeFromSuperlayer()
             })
         
-        view.bringSubviewToFront(sender)
+        view.bringSubview(toFront: sender)
     }
 }

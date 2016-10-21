@@ -10,7 +10,7 @@ import UIKit
 
   //  MARK: - 代理
 protocol EditViewConteollerDelegate : NSObjectProtocol{
-    func modifyName(name name : String)
+    func modifyName(name : String)
 }
 
   //  MARK: - 用于传值的block
@@ -28,21 +28,21 @@ class EditViewController: UIViewController {
     @IBOutlet weak var blockBtn: UIButton!
     
     //  MARK: - 代理按钮点击
-    @IBAction func delegateBtnClick(sender: UIButton) {
+    @IBAction func delegateBtnClick(_ sender: UIButton) {
         
         if delegte != nil{
             delegte?.modifyName(name: textFiled.text!)
         }
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     //  MARK: - block按钮点击
-    @IBAction func blockBtnClick(sender: UIButton) {
+    @IBAction func blockBtnClick(_ sender: UIButton) {
         
         if let tempBlock = editViewBlock{
             tempBlock(textFiled.text!)
         }
-        navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewController(animated: true)
     }
     
     
@@ -56,7 +56,7 @@ class EditViewController: UIViewController {
         }
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textFiled.resignFirstResponder()
     }
     
